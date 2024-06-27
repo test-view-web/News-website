@@ -26,7 +26,14 @@ class AppHeader extends Component {
 		})
 	}
 
-	componentDidMount() {
+	getTestMap(){
+		let array1 = [6,5,4,3,2,1,0]
+		let array2 = array1.map(a=>(a+1));
+		console.log(array2);
+
+	}
+
+	componentDidMount() {	
 		axios.get('http://www.dell-lee.com/react/api/header.json')
 			.then((res) => {
 				this.setState({
@@ -49,9 +56,10 @@ class AppHeader extends Component {
 					mode="horizontal" 
 					className='app-header-menu'
 				>
-	        { this.getMenuItems() }
-	      </Menu>
-      </Fragment>
+	        		{ this.getMenuItems() }
+					{ this.getTestMap()}
+	      		</Menu>
+      		</Fragment>
 		)
 	}
 }

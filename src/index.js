@@ -28,7 +28,7 @@ class App extends Component {
 		      		<Route path='/:id?' component={List} />
 		      	</Switch>
 		      </Content>
-		      <Footer className="footer">@copyright Dell-Lee 2018</Footer>
+		      <Footer className="footer"></Footer>
 	    	</Layout>
     	</BrowserRouter>
 		)
